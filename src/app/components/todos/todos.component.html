@@ -5,7 +5,7 @@
 			<input type="checkbox" [checked]="todo.isComplete" (change)="changeTodoStatus(todo)">
 		</span>
 		
-		<span [ngClass]="{completeTodo:todo.isComplete}">
+		<span *ngIf="todo.title" [ngClass]="{completeTodo:todo.isComplete}">
 			{{todo.title | uppercase}}
 		</span>
 		<span  [ngClass]="{completeTodo:todo.isComplete}" >

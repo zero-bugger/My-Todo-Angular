@@ -5,9 +5,11 @@
 		   class="form-control"
 		   [(ngModel)]="todoTitle"
 		   >
-	<div class="input-group-append">
+	<div *ngIf="todoTitle" class="input-group-append">
 		<button (click)="handleAdd()" class="btn btn-primary" >
 			Add Todo
 		</button>
 	</div>
+	
 </div>
+
